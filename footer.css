@@ -1,0 +1,187 @@
+/* 푸터 공용 css 푸터 위아래 (탑, 바텀) 모두가 사용하는 css입니다. 3페어분들도 이거는 꼭 붙여넣기 해주세요*/
+@font-face {
+  font-family: "KCC-Ganpan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.nanumgothic * {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+* {
+  font-family: "KCC-Ganpan";
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+}
+footer {
+  background-color: var(--dark-brown);
+}
+
+footer * {
+  color: #bba391;
+  font-family: "Nanum Gothic";
+  font-weight: bold;
+}
+
+footer > .top > ul > li > a {
+  color: #bba391;
+  font-family: "Nanum Gothic";
+  font-weight: bold;
+}
+
+/*위까지가 공용 css 아래부터는 푸터의 윗부분(탑) 입니다.*/
+
+.top {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin: 0 62px;
+  padding-top: 50px;
+  height: 388px;
+}
+
+footer > .top > ul > li > .footertitle {
+  font-size: 1.6rem;
+  color: #f5ebdc;
+  font-family: "KCC-Ganpan";
+}
+
+.top > ul > li {
+  padding-bottom: 8px;
+  min-width: 100px;
+}
+
+.top > ul > li:first-child {
+  margin-bottom: 13px;
+}
+
+.top > ul:last-child {
+  padding-right: 100px;
+}
+
+/* 여기서부터 푸터 아랫부분. (바텀) 3페어분들은 여기서부터 붙여넣기 하시면 됩니다.*/
+
+.bottom {
+  max-width: 1156px;
+  position: relative;
+  border-top: 1px solid #bba391;
+  margin: 0 auto;
+  padding: 47px 0;
+}
+
+.burgerkingpng {
+  margin-bottom: 24px;
+}
+
+.bottom p {
+  font-size: 14px;
+}
+
+.footersns a.facebook {
+  background-image: url(../img/img/footerfacebook.png);
+}
+
+.footersns a.instagram {
+  background-image: url(../img/img/footerinstagram.png);
+}
+
+.footersns {
+  margin-top: 20px;
+}
+
+.footersns a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  text-indent: -9999em;
+}
+
+.footer_menu {
+  position: absolute;
+  right: 0;
+  /* top: 42px; */
+}
+
+.footer_menu > ul {
+  display: block;
+}
+
+.footer_menu > ul > li {
+  float: left;
+}
+
+.footer_menu > ul > li > a {
+  padding: 0 10px;
+  font-size: 14px;
+  border-right: 1px solid #502314;
+  color: #bba391;
+}
+
+.footer_button {
+  margin: 36px 6px;
+}
+
+.footer_button a {
+  padding: 6px 32px;
+  border: 1px solid #bba391;
+  border-radius: 16px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #f5ebdc;
+}
+
+@media screen and (max-width: 768px) {
+  .top {
+    display: none;
+  }
+
+  .bottom {
+    padding: 35px 16px;
+  }
+
+  .footer_menu {
+    position: relative;
+    padding-bottom: 30px;
+  }
+
+  .footer_menu ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer_button {
+    margin: 14px 8px;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+  }
+
+  .footer_button > a {
+    height: 30px;
+    padding: 0px 18px;
+    margin: 0;
+    margin-left: 4px;
+  }
+
+  .burgerkingpng {
+    margin: 30px 0px 17px;
+  }
+
+  .footersns > a {
+    width: 16px;
+    height: 16px;
+    background-size: 100%;
+  }
+}
