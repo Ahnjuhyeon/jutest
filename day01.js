@@ -1,16 +1,30 @@
-// 1. 가장 큰 값 구하기
-// 함수의 이름은 maxValue 입니다. 인자로는 정수들이 들어있는 배열을 파라미터로 전달받습니다. 배열로 전달받은 숫자 중 가장 큰 숫자와
-// 숫자를 내림차순으로 정렬된 배열을 객체 형태로 반환해야 합니다.
-//  const a = maxvalue([1,2,3,4,5])
-//  console.log(a)
-//  결과값
-//  {
-//  maxValue: 5,
-//  sortArr = [5,4,3,2,1]
-//  }
-// let array = [1, 2, 3, 4, 5];
-// let a = Math.max.apply(null, array);
-// console.log(a);
+/*
+1. 가장 큰 값 구하기
+함수의 이름은 maxValue 입니다. 인자로는 정수들이 들어있는 배열을 파라미터로 전달받습니다. 
+배열로 전달받은 숫자 중 가장 큰 숫자와
+숫자를 내림차순으로 정렬된 배열을 객체 형태로 반환해야 합니다.
+ const a = maxvalue([1,2,3,4,5])
+ console.log(a)
+ 결과값
+ {
+ maxValue: 5,
+ sortArr = [5,4,3,2,1]
+ }
+*/
+
+//6/17일 다시 문제  풀어보기
+
+function maxvalue(arr) {
+  arr.reverse(arr);
+
+  let result = {
+    maxvalue: arr[0],
+    sortArr: [arr],
+  };
+  return result;
+}
+const a = maxvalue([1, 2, 3, 4, 5]);
+console.log(a);
 
 // 6/13 문제풀이 시작
 // const nums = [3, 1, 5, 2, 4, 20];
@@ -29,7 +43,7 @@
 // console.log(a);
 // console.log(b);
 
-// 배열은 하나의 저장공간에 여러가지가 담긴다sp
+// 배열은 하나의 저장공간에 여러가지가 담긴다
 // []비어있는 배열
 // 배열의 요소갯수를 알려주는 기능 렝스
 
@@ -70,6 +84,8 @@ return console.log(b);  --> 실행문, 지금까지 위에 적어두었던 내�
 
 const c = maxValue([2, 5, 1, 3, 4]); 이게 있어야 선언이 가능
 --------*/
+
+/* 1조 페어분께 도움 받은거 
 function maxValue(a) {
   let sortArr = [];
   for (i = 0; i <= a.length; i++) {
@@ -98,4 +114,4 @@ function maxValue(a) {
 
 const c = maxValue([2, 5, 1, 3, 4]);
 console.log(c);
-// console.log(c);
+// console.log(c);*/
