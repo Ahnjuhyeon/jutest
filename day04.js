@@ -32,7 +32,7 @@ const arr = [1, 2, 3, 4, 5];
 const a = solution(arr);
 console.log(a);
 
-//필터사용 해봐야징
+//필터사용 해봐야징잉
 // const filterArr = [1, 2, 3, 4, 5];
 // const solution = filterArr.filter((item) => item % 2 === 0);
 
