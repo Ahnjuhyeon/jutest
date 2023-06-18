@@ -26,9 +26,10 @@
  ”바사삭치킨“ (품목 없음) 
 */
 
-//6/17 다시 문제 풀어보기
+//6/17 다시 문제 풀어보기 => 실패
+//6/18 다시 문제 풀어보기 =>스엉공..이지만 왜???????????????
 
-function type(item, value) {
+function type(value, item) {
   const menu = {
     야채곱창: 5,
     바나나우유: 10,
@@ -36,15 +37,16 @@ function type(item, value) {
     도시락: 10,
     샌드위치: 10,
   };
-  const result = menu[value];
+  const count = menu[item];
 
-  if (result === value) return console.log("전산표와일치합니다");
-  if (result !== value) return console.log("전산표와일치하지않습니다");
-  if (!result) return console.log("품목없음");
+  if (!count) return console.log("품목없음");
+  if (count === value) return console.log("전산표와일치합니다");
+  if (count !== value) return console.log("전산표와일치하지않습니다");
 
   return console.log(item, value);
 }
-type("야채곱창", 5);
+type(5, "야채곱창");
+//뭘자꾸 일치하지 않대 맞뀨만..
 
 // let yagop = 5;
 // let banana = 10;
