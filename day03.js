@@ -50,7 +50,7 @@ function random(arr, test) {
   }
   for (let i = 0; i < arr.length; i++) {
     if (test === test) return result.slice(1);
-    // 요기부터 내일 필터로 다시 해보자!
+    // 요기부터 내일 필터로 다시 해보자구!
 
     if (result[i] === test) return " 값이 있음";
   }
