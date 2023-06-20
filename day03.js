@@ -49,13 +49,15 @@ function random(arr, test) {
     // result.shift();
   }
   for (let i = 0; i < arr.length; i++) {
-    if (test === test) return result.slice(1);
+    // if (test === test) return result.slice(1);
     // 요기부터 내일 필터로 다시 해보자구!
+    let testNum = result.filter((item) => item != test);
+    if (result[i] === test) return testNum;
 
-    if (result[i] === test) return " 값이 있음";
+    // return result.filter(test);
   }
   return " 값이 없음";
 }
 const arr = [1, 2, 3, 4, 5];
-const a = random(arr, 11);
+const a = random(arr, 12);
 console.log(a);

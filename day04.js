@@ -13,30 +13,35 @@ console.log(a)
 [2,3]
 [짝수의 개수, 홀수의 개수]
 */
-//6/18문제풀이
+//6/18문제풀이  성공
 
+// function solution(arr) {
+//   let a = 0;
+//   let b = 0;
+//   for (i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 == 0) {
+//       a++;
+//     } else {
+//       b++;
+//     }
+//   }
+//   return [a, b];
+// }
+
+// const arr = [1, 2, 3, 4, 5];
+// const a = solution(arr);
+// console.log(a);
+
+//6/20 필터사용 해봐야징잉 지원님 덕분에 성공
 function solution(arr) {
-  let a = 0;
-  let b = 0;
-  for (i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 == 0) {
-      a++;
-    } else {
-      b++;
-    }
-  }
-  return [a, b];
+  let a = arr.filter((item) => item % 2 === 0);
+  let b = arr.filter((item) => item % 2 === 1);
+  return [a.length, b.length];
 }
 
 const arr = [1, 2, 3, 4, 5];
 const a = solution(arr);
 console.log(a);
-
-//필터사용 해봐야징잉
-// const filterArr = [1, 2, 3, 4, 5];
-// const solution = filterArr.filter((item) => item % 2 === 0);
-
-// console.log(solution);
 
 /*
 for (let i = 0; i < 5; i++) {

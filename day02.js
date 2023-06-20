@@ -45,7 +45,7 @@ function type(value, item) {
 
   return console.log(item, value);
 }
-type(5, "야채곱창");
+type(6, "야채곱창");
 //뭘자꾸 일치하지 않대 맞뀨만..
 
 // let yagop = 5;
