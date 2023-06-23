@@ -48,13 +48,18 @@ console.log(deletePost);
 */
 //1
 const deletePost = Posts.filter((post) => post.number !== 2398692);
-console.log(deletePost);
+// console.log(deletePost);
 
 //2 - 아직
 const Post = Posts.find((post) => post.price > 50000);
 // post.content = "exmaple";
-console.log(Post);
+// console.log(Post);
 
 //3
-const addPost = Posts.map((post) => post.price + 10000);
+const addPost = Posts.map(
+  (post) => `[${post.number}]  ${post.price + 10000}${post.brand}${post.id}`
+);
+// const Post = Posts.find((post))
 console.log(addPost);
+// ${element.RESTDE_DATE} ${element.RESTDE_NM} ${element.PRICE + 1000})
+//${post.number}${post.price + 10000}${post.brand}${post.id})
