@@ -72,4 +72,4 @@ for (var i = 0; i < items.length; i++) {
 }
 */
 
-//
+//3번 문제풀이
