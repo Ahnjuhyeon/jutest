@@ -20,29 +20,32 @@ for (let i = 0; i < $items.length; i++) {
 }
 */
 // 지원님이 공유해주신 코드로 복붙..
-const tab = document.getElementsByClassName("tab");
+const $tab = document.getElementsByClassName("tab");
 function handleClick(event) {
-  console.log(event.target);
+  // console.log(event.target);
   // console.log(this);
   // 콘솔창을 보면 둘다 동일한 값이 나온다
 
-  console.log(event.target.classList);
-  if (event.target.classList[1] === "clicked") {
-    event.target.classList.remove("clicked");
-  } else {
-    for (var i = 0; i < tab.length; i++) {
-      tab[i].classList.remove("clicked");
-    }
+  // console.log(event.target.classList);
+  // if (event.target.classList[1] === "clicked") {
+  //   // [1] 이 아니여도 다른 숫자여도 정상작동을 하는데..? 왜일까
+  //   event.target.classList.remove("clicked");
+  // } else {
+  // 지워도 잘 작동이 된다는 사실을 알았다
 
-    event.target.classList.add("clicked");
+  for (let i = 0; i < $tab.length; i++) {
+    $tab[i].classList.remove("clicked");
   }
+
+  event.target.classList.add("clicked");
 }
 
 function init() {
-  for (var i = 0; i < tab.length; i++) {
-    tab[i].addEventListener("click", handleClick);
+  for (let i = 0; i < $tab.length; i++) {
+    $tab[i].addEventListener("click", handleClick);
   }
 }
+//addEventListener는 함수 부분에서 event 또는 e 라는 매개변수를 받을 수 있다.
 
 init();
 
@@ -72,4 +75,10 @@ for (var i = 0; i < items.length; i++) {
 }
 */
 
-//3번 문제풀이
+//3. 위의 탭 클릭시 아래의 컨텐츠 중 탭과 숫자가 같은 것만 보이게 하시오.
+const $block = document.querySelectorAll(".block");
+for (let i = 0; i < $block.length; i++) {
+  $tab[i].onclick = function () {
+    $block[i].style.display = "block";
+  };
+}
