@@ -33,9 +33,15 @@
       }
 
       /*삭제할 내용*/
-      .clicked {
+      .tab.active {
         background-color: skyblue;
         color: blue;
+      }
+      .block {
+        display: none;
+      }
+      .block.active {
+        display: block;
       }
     </style>
   </head>
@@ -49,7 +55,7 @@
 
       <p>2.탭을 선택하면 선택한 탭의 배경과 글자의색이 바뀌도록 하시오</p>
       <div class="tab_host">
-        <div class="tab">탭1</div>
+        <div class="tab active">탭1</div>
         <div class="tab">탭2</div>
         <div class="tab">탭3</div>
         <div class="tab">탭4</div>
@@ -60,11 +66,11 @@
         3. 위의 탭 클릭시 아래의 컨텐츠중 탭과 숫자가 같은 것만 보이게 하시오.
       </p>
       <div class="tab_body">
-        <div class="block">탭1 컨텐츠</div>
-        <div class="block">탭3 컨텐츠</div>
+        <div class="block active">탭1 컨텐츠</div>
         <div class="block">탭2 컨텐츠</div>
-        <div class="block">탭5 컨텐츠</div>
+        <div class="block">탭3 컨텐츠</div>
         <div class="block">탭4 컨텐츠</div>
+        <div class="block">탭5 컨텐츠</div>
       </div>
     </div>
     <script src="./js/script.js"></script>
