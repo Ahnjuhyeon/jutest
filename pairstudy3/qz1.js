@@ -12,3 +12,32 @@ function parse() {}
 function main() {
   solution();
 }
+
+// function main(a)
+// const b = selector(e)
+//function solution(c)
+//const c = d;
+// return e
+
+function solution(c) {
+  const c = d;
+}
+function parse() {}
+function main(a) {
+  solution();
+}
+const e = main();
+console.log(e);
+
+// 재 풀이
+b = document.querySelector("");
+function solution(c) {
+  let d = c;
+}
+function parse() {}
+function main() {
+  let a;
+
+  solution(c);
+  return e;
+}
