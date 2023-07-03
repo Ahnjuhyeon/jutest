@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module" defer src="./js/musinsa.js"></script>
+    <style>
+      .post-list {
+        width: 920px;
+        margin: 0 auto;
+        background-color: aquamarine;
+      }
+
+      .post-list > article {
+        background-color: #000;
+        color: #fff;
+        margin: 16px;
+      }
+
+      .post-list > article > div {
+        border: 1px solid #fff;
+      }
+
+      .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- mu form -->
+      <div>
+        <p>ID: <input class="name" /></p>
+        <label>내용</label>
+        <textarea class="content"></textarea>
+        <button class="write-btn">작성</button>
+      </div>
+      <!-- musinsa list  -->
+      <div class="post-list">
+        <article class="post-card">
+          <h3 class="flex-center">
+            example-title
+            <button>삭제</button>
+          </h3>
+          <div class="flex-center">example-content</div>
+        </article>
+      </div>
+      <!-- musinsa datail -->
+      <div class="post-detail">
+        <button>수정</button>
+        <p>example-title</p>
+        <div>example-content</div>
+      </div>
+    </div>
+  </body>
+</html>
