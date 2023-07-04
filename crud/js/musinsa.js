@@ -16,28 +16,28 @@ postMock.forEach((post) => {
 //create
 //어디에다가 추가하고 싶은지?
 const $writeBtn = document.querySelector(".write-btn");
-const $id = document.querySelector(".id");
-const $content = document.querySelector(".content");
+const $name = document.querySelector(".name");
+const $price = document.querySelector(".price");
 
 $writeBtn.addEventListener("click", () => {
-  if (!$id.value.trim() || !$content.value.trim()) {
+  if (!$name.value.trim() || !$price.value.trim()) {
     return alert("제대로 입력해");
   }
   const shortId = Math.floor(Math.random() * 1000000);
   renderPost({
     id: shortId,
-    name: $id.value,
-    price: $content.value,
+    name: $name.value,
+    price: $price.value,
   });
   // 새로운 게시글이 포함된 데이터 요청이 불가하니
   //직접 배열에 데이터 추가
   postMock.push({
     id: shortId,
-    name: $id.value,
-    price: $content.value,
+    name: $name.value,
+    price: $price.value,
   });
-  document.querySelector(".id").value = "";
-  document.querySelector(".content").value = "";
+  document.querySelector(".name").value = "";
+  document.querySelector(".price").value = "";
 });
 
 function renderPost(post) {
@@ -46,11 +46,11 @@ function renderPost(post) {
   article.setAttribute("data-role", post.id);
   article.addEventListener("click", getPostDetail);
   article.innerHTML = `
-  <h3 class="flex-center"> ${post.title}
+  <h3 class="flex-center"> ${post.name}
   <button>삭제</button>
   </h3>
   <div class="flex-center">
-  ${post.content}
+  ${post.price}
   </div>
   `;
   $postList.appendChild(article);
@@ -65,9 +65,10 @@ function getPostDetail(e) {
   const post = postMock.find((post) => post.id === parseInt(postId));
   $postDetail.innerHTML = `
 <button>수정</button>
-<p>${board.title}</p>
-<div>${board.content}</div>
+<p>${post.name}</p>
+<div>${post.price}</div>
 `;
 }
 
 //title 부분 id로 바꾼것들을 다시 name 으로 바꾸기
+// 오류났던 부분 수정
